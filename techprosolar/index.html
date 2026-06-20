@@ -1,0 +1,1601 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Techpro Solar | Energia Solar com até 95% de Economia</title>
+  <meta name="description" content="Techpro Solar – Energia solar fotovoltaica, BESS, carregadores veiculares e usinas de investimento. +3.000 projetos executados. CNPJ: 44.150.790/0001-67" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── TOKENS ─────────────────────────────────────────────── */
+    :root {
+      --green:    #004B3E;
+      --green-mid:#005c4b;
+      --green-light:#007a62;
+      --gold:     #F5A800;
+      --gold-dark:#d4900a;
+      --white:    #ffffff;
+      --off-white:#f7f8f6;
+      --gray-100: #f0f0ee;
+      --gray-300: #c8c8c4;
+      --gray-500: #888884;
+      --gray-700: #3a3a38;
+      --dark:     #0e1a16;
+
+      --font-display: 'Barlow Condensed', sans-serif;
+      --font-body:    'Inter', sans-serif;
+
+      --radius: 12px;
+      --radius-lg: 20px;
+      --shadow: 0 4px 24px rgba(0,0,0,.10);
+      --shadow-lg: 0 12px 48px rgba(0,0,0,.18);
+    }
+
+    /* ── RESET ──────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      color: var(--gray-700);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── NAV ────────────────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(0,75,62,.96);
+      backdrop-filter: blur(8px);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5vw;
+      height: 68px;
+      border-bottom: 2px solid var(--gold);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 12px; }
+    .nav-logo img { height: 40px; }
+    .nav-logo-text { display: flex; flex-direction: column; line-height: 1; }
+    .nav-logo-text span:first-child {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.35rem;
+      color: var(--white);
+      letter-spacing: .04em;
+    }
+    .nav-logo-text span:last-child {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: .8rem;
+      color: var(--gold);
+      letter-spacing: .12em;
+    }
+    .nav-links {
+      display: flex; gap: 28px; list-style: none;
+      font-size: .85rem; font-weight: 500; color: rgba(255,255,255,.85);
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta {
+      background: var(--gold);
+      color: var(--dark) !important;
+      font-weight: 700 !important;
+      padding: 8px 20px;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+    .nav-cta:hover { background: var(--gold-dark) !important; color: var(--dark) !important; }
+
+    /* hamburger */
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: .3s; }
+    .mobile-menu {
+      display: none; position: fixed; top: 68px; left: 0; right: 0; z-index: 99;
+      background: var(--green);
+      padding: 20px 5vw 28px;
+      flex-direction: column; gap: 4px;
+      border-bottom: 2px solid var(--gold);
+    }
+    .mobile-menu a {
+      color: rgba(255,255,255,.9);
+      font-weight: 500;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+      display: block;
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu .m-cta {
+      margin-top: 12px;
+      background: var(--gold);
+      color: var(--dark);
+      text-align: center;
+      padding: 14px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .mobile-menu.open { display: flex; }
+
+    /* ── HERO ───────────────────────────────────────────────── */
+    .hero {
+      min-height: 100svh;
+      background: linear-gradient(155deg, var(--dark) 0%, var(--green) 55%, var(--green-mid) 100%);
+      display: flex; align-items: center;
+      padding: 100px 5vw 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 80% 50%, rgba(245,168,0,.12) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 80% at 20% 80%, rgba(0,122,98,.25) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    /* large decorative sun ring */
+    .hero::after {
+      content: '';
+      position: absolute;
+      right: -180px; top: 50%;
+      transform: translateY(-50%);
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      border: 60px solid rgba(245,168,0,.10);
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative; z-index: 1;
+      max-width: 780px;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(245,168,0,.15);
+      border: 1px solid rgba(245,168,0,.4);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: .78rem;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--gold);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%,100% { opacity:1; transform:scale(1); }
+      50% { opacity:.4; transform:scale(1.4); }
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 8vw, 5.4rem);
+      font-weight: 900;
+      line-height: .95;
+      color: var(--white);
+      letter-spacing: -.01em;
+      margin-bottom: 8px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--gold);
+      display: block;
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: rgba(255,255,255,.75);
+      max-width: 520px;
+      margin: 20px 0 40px;
+      line-height: 1.5;
+    }
+    .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--gold);
+      color: var(--dark);
+      font-weight: 700; font-size: 1rem;
+      padding: 16px 32px;
+      border-radius: var(--radius);
+      transition: .2s;
+      white-space: nowrap;
+    }
+    .btn-primary:hover { background: var(--gold-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,168,0,.35); }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      border: 2px solid rgba(255,255,255,.35);
+      color: var(--white);
+      font-weight: 600; font-size: 1rem;
+      padding: 14px 28px;
+      border-radius: var(--radius);
+      transition: .2s;
+      white-space: nowrap;
+    }
+    .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,.08); }
+    .hero-stats {
+      display: flex; gap: clamp(20px, 5vw, 48px); flex-wrap: wrap;
+      margin-top: 56px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,.12);
+    }
+    .hero-stat {}
+    .hero-stat strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      font-weight: 900;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .hero-stat span {
+      font-size: .8rem;
+      color: rgba(255,255,255,.55);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    /* ── TRUST BAR ──────────────────────────────────────────── */
+    .trust-bar {
+      background: var(--gold);
+      padding: 14px 5vw;
+      overflow: hidden;
+    }
+    .trust-ticker {
+      display: flex; gap: 48px; align-items: center;
+      white-space: nowrap;
+      animation: ticker 22s linear infinite;
+      width: max-content;
+    }
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .trust-item {
+      display: flex; align-items: center; gap: 10px;
+      font-family: var(--font-display);
+      font-weight: 700; font-size: .95rem;
+      color: var(--dark);
+      text-transform: uppercase; letter-spacing: .06em;
+    }
+    .trust-item svg { flex-shrink: 0; }
+
+    /* ── SECTIONS ───────────────────────────────────────────── */
+    section { scroll-margin-top: 68px; }
+    .section-tag {
+      display: inline-block;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      background: rgba(245,168,0,.12);
+      border: 1px solid rgba(245,168,0,.3);
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      color: var(--green);
+      line-height: 1.05;
+      letter-spacing: -.01em;
+    }
+    .section-title em {
+      font-style: normal;
+      color: var(--gold-dark);
+    }
+    .section-lead {
+      font-size: 1.05rem;
+      color: var(--gray-500);
+      max-width: 580px;
+      margin-top: 12px;
+      line-height: 1.65;
+    }
+
+    /* ── INTRO / WHY ────────────────────────────────────────── */
+    .why {
+      padding: 80px 5vw;
+      background: var(--off-white);
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .why-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      border: 1px solid var(--gray-100);
+      transition: .25s;
+    }
+    .why-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .why-icon {
+      width: 52px; height: 52px;
+      background: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%);
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 18px;
+    }
+    .why-icon svg { color: var(--white); }
+    .why-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+    .why-card p { font-size: .9rem; color: var(--gray-500); line-height: 1.6; }
+
+    /* ── SERVICE CARDS ──────────────────────────────────────── */
+    .services {
+      padding: 80px 5vw;
+      background: var(--white);
+    }
+    .services-header { margin-bottom: 56px; }
+    .service-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 56px;
+      border: 1px solid var(--gray-100);
+    }
+    .service-block.reverse { direction: rtl; }
+    .service-block.reverse > * { direction: ltr; }
+    .service-img {
+      position: relative;
+      min-height: 360px;
+      overflow: hidden;
+    }
+    .service-img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      filter: brightness(.85);
+      transition: .5s;
+    }
+    .service-block:hover .service-img img { transform: scale(1.04); filter: brightness(.9); }
+    .service-img-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(0,75,62,.6) 0%, transparent 60%);
+    }
+    .service-img-tag {
+      position: absolute; top: 20px; left: 20px;
+      background: var(--gold);
+      color: var(--dark);
+      font-family: var(--font-display);
+      font-weight: 800; font-size: .8rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+    }
+    /* fallback decorative bg when no photo */
+    .service-img-bg {
+      width: 100%; height: 100%; min-height: 360px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .service-content {
+      padding: 48px 44px;
+      background: var(--white);
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .service-content .section-tag { margin-bottom: 10px; }
+    .service-content h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3.5vw, 2.3rem);
+      font-weight: 800;
+      color: var(--green);
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .service-content h2 span { color: var(--gold-dark); }
+    .service-content p {
+      font-size: .97rem;
+      color: var(--gray-700);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+    .feature-list {
+      list-style: none;
+      display: flex; flex-direction: column; gap: 10px;
+      margin-bottom: 32px;
+    }
+    .feature-list li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: .9rem; color: var(--gray-700);
+    }
+    .feature-list li::before {
+      content: '';
+      flex-shrink: 0;
+      width: 18px; height: 18px; margin-top: 2px;
+      background: var(--gold);
+      border-radius: 50%;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.5 7L5.5 10L11.5 4' stroke='%230e1a16' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: center;
+    }
+    .data-pill {
+      display: inline-flex;
+      background: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%);
+      color: var(--white);
+      border-radius: var(--radius);
+      padding: 12px 20px;
+      gap: 16px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+    .data-pill-item { text-align: center; }
+    .data-pill-item strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.5rem; font-weight: 900;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .data-pill-item small {
+      font-size: .72rem;
+      color: rgba(255,255,255,.7);
+      text-transform: uppercase; letter-spacing: .06em;
+    }
+    .btn-service {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--green);
+      color: var(--white);
+      font-weight: 700; font-size: .95rem;
+      padding: 14px 28px;
+      border-radius: var(--radius);
+      transition: .2s;
+      align-self: flex-start;
+    }
+    .btn-service:hover { background: var(--green-mid); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,75,62,.3); }
+
+    /* ── DECORATIVE SERVICE BG ──────────────────────────────── */
+    .sbg-solar {
+      background: linear-gradient(135deg, #0a2e27 0%, #004B3E 40%, #1a5c4a 100%);
+    }
+    .sbg-bess {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+    }
+    .sbg-ev {
+      background: linear-gradient(135deg, #1a2e0a 0%, #2d4a1e 40%, #3a5c28 100%);
+    }
+    .sbg-usina {
+      background: linear-gradient(135deg, #2e1a0a 0%, #4a2d0f 40%, #5c3a18 100%);
+    }
+    .sbg-install {
+      background: linear-gradient(135deg, #1e0a2e 0%, #2d1a4a 40%, #3a285c 100%);
+    }
+    .sbg-icon {
+      font-size: 120px;
+      opacity: .18;
+      filter: grayscale(1) brightness(3);
+      user-select: none;
+    }
+
+    /* ── INVESTMENT CTA ─────────────────────────────────────── */
+    .invest-banner {
+      background: linear-gradient(135deg, var(--green) 0%, var(--dark) 100%);
+      padding: 72px 5vw;
+      position: relative;
+      overflow: hidden;
+    }
+    .invest-banner::before {
+      content: '⚡';
+      position: absolute; right: 5vw; top: 50%;
+      transform: translateY(-50%);
+      font-size: 240px; opacity: .06;
+      pointer-events: none;
+    }
+    .invest-inner {
+      max-width: 640px;
+      position: relative; z-index: 1;
+    }
+    .invest-banner h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 900; color: var(--white);
+      line-height: 1.05; margin-bottom: 16px;
+    }
+    .invest-banner h2 em { font-style: normal; color: var(--gold); }
+    .invest-banner p {
+      color: rgba(255,255,255,.72);
+      margin-bottom: 32px;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+
+    /* ── NÚMEROS ────────────────────────────────────────────── */
+    .numbers {
+      padding: 80px 5vw;
+      background: var(--off-white);
+    }
+    .numbers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .number-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 36px 24px;
+      text-align: center;
+      border: 1px solid var(--gray-100);
+      position: relative; overflow: hidden;
+    }
+    .number-card::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold) 0%, var(--gold-dark) 100%);
+    }
+    .number-card strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 6vw, 3.2rem);
+      font-weight: 900;
+      color: var(--green);
+      line-height: 1;
+    }
+    .number-card span {
+      font-size: .82rem;
+      color: var(--gray-500);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      margin-top: 8px;
+      display: block;
+    }
+
+    /* ── ABOUT TECH ─────────────────────────────────────────── */
+    .about-tech {
+      padding: 80px 5vw;
+      background: var(--white);
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 64px;
+      align-items: center;
+      margin-top: 48px;
+    }
+    .cert-badges {
+      display: flex; flex-wrap: wrap; gap: 12px;
+      margin-top: 28px;
+    }
+    .badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--off-white);
+      border: 1px solid var(--gray-100);
+      border-radius: 8px;
+      padding: 10px 16px;
+      font-size: .82rem; font-weight: 600; color: var(--green);
+    }
+    .badge svg { color: var(--gold-dark); }
+    .tech-visual {
+      background: linear-gradient(135deg, var(--green) 0%, var(--dark) 100%);
+      border-radius: var(--radius-lg);
+      padding: 48px 40px;
+      color: var(--white);
+      position: relative; overflow: hidden;
+    }
+    .tech-visual::before {
+      content: '';
+      position: absolute; top: -60px; right: -60px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      border: 40px solid rgba(245,168,0,.12);
+    }
+    .tech-metric {
+      margin-bottom: 32px;
+    }
+    .tech-metric:last-child { margin-bottom: 0; }
+    .tech-metric-label {
+      font-size: .78rem;
+      color: rgba(255,255,255,.55);
+      text-transform: uppercase; letter-spacing: .1em;
+      margin-bottom: 6px;
+    }
+    .tech-metric-bar {
+      height: 6px;
+      background: rgba(255,255,255,.12);
+      border-radius: 3px;
+      margin-top: 8px;
+      overflow: hidden;
+    }
+    .tech-metric-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--gold) 0%, #ffcc44 100%);
+      border-radius: 3px;
+      transition: width 1s ease;
+    }
+    .tech-metric-value {
+      font-family: var(--font-display);
+      font-size: 1.7rem; font-weight: 800;
+      color: var(--white);
+      line-height: 1;
+    }
+    .tech-metric-value small {
+      font-size: .9rem;
+      color: var(--gold);
+    }
+
+    /* ── FAQ ────────────────────────────────────────────────── */
+    .faq {
+      padding: 80px 5vw;
+      background: var(--off-white);
+    }
+    .faq-list { max-width: 720px; margin-top: 48px; }
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--gray-100);
+      border-radius: var(--radius);
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .faq-q {
+      width: 100%; text-align: left;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 24px;
+      cursor: pointer;
+      background: none; border: none;
+      font-family: var(--font-body);
+      font-size: .97rem; font-weight: 600; color: var(--green);
+      gap: 16px;
+      transition: .2s;
+    }
+    .faq-q:hover { color: var(--green-mid); }
+    .faq-icon {
+      flex-shrink: 0;
+      width: 28px; height: 28px;
+      background: var(--off-white);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      transition: .3s;
+      font-size: 1.2rem; color: var(--gold-dark); line-height: 1;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--gold); color: var(--dark); }
+    .faq-a {
+      display: none;
+      padding: 0 24px 20px;
+      font-size: .92rem; color: var(--gray-500);
+      line-height: 1.7;
+      border-top: 1px solid var(--gray-100);
+      padding-top: 16px;
+    }
+    .faq-item.open .faq-a { display: block; }
+
+    /* ── CONTACT ────────────────────────────────────────────── */
+    .contact {
+      padding: 80px 5vw;
+      background: var(--white);
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      margin-top: 48px;
+      align-items: start;
+    }
+    .contact-info h3 {
+      font-family: var(--font-display);
+      font-size: 1.3rem; font-weight: 700; color: var(--green);
+      margin-bottom: 24px;
+    }
+    .contact-item {
+      display: flex; align-items: flex-start; gap: 14px;
+      margin-bottom: 20px;
+    }
+    .contact-ico {
+      width: 44px; height: 44px; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .contact-ico svg { color: var(--white); }
+    .contact-item strong { display: block; font-weight: 600; color: var(--green); font-size: .9rem; }
+    .contact-item a, .contact-item span { font-size: .9rem; color: var(--gray-500); }
+    .contact-item a:hover { color: var(--gold-dark); }
+
+    .contact-form {
+      background: var(--off-white);
+      border-radius: var(--radius-lg);
+      padding: 40px 36px;
+      border: 1px solid var(--gray-100);
+    }
+    .contact-form h3 {
+      font-family: var(--font-display);
+      font-size: 1.3rem; font-weight: 700; color: var(--green);
+      margin-bottom: 24px;
+    }
+    .form-group { margin-bottom: 16px; }
+    .form-group label {
+      display: block; font-size: .82rem; font-weight: 600;
+      color: var(--gray-700); margin-bottom: 6px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid var(--gray-300);
+      border-radius: 8px;
+      font-family: var(--font-body);
+      font-size: .93rem;
+      color: var(--gray-700);
+      background: var(--white);
+      transition: .2s;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--green);
+      box-shadow: 0 0 0 3px rgba(0,75,62,.1);
+    }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .btn-form {
+      width: 100%;
+      background: var(--gold);
+      color: var(--dark);
+      font-weight: 700; font-size: 1rem;
+      padding: 16px;
+      border: none; border-radius: var(--radius); cursor: pointer;
+      font-family: var(--font-body);
+      transition: .2s;
+      margin-top: 8px;
+    }
+    .btn-form:hover { background: var(--gold-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,168,0,.35); }
+
+    /* ── FOOTER ─────────────────────────────────────────────── */
+    footer {
+      background: var(--dark);
+      padding: 48px 5vw 28px;
+    }
+    .footer-top {
+      display: flex; flex-wrap: wrap; gap: 32px;
+      align-items: flex-start;
+      padding-bottom: 32px;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+      margin-bottom: 24px;
+    }
+    .footer-brand { flex: 1; min-width: 200px; }
+    .footer-brand img { height: 48px; margin-bottom: 12px; }
+    .footer-brand p { font-size: .85rem; color: rgba(255,255,255,.45); line-height: 1.6; max-width: 260px; margin-top: 8px; }
+    .footer-links { display: flex; gap: 48px; flex-wrap: wrap; }
+    .footer-col h4 {
+      font-family: var(--font-display);
+      font-size: .85rem; font-weight: 700; color: var(--gold);
+      text-transform: uppercase; letter-spacing: .1em;
+      margin-bottom: 14px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul li a { font-size: .85rem; color: rgba(255,255,255,.5); transition: .2s; }
+    .footer-col ul li a:hover { color: var(--white); }
+    .footer-bottom {
+      display: flex; flex-wrap: wrap; gap: 12px;
+      align-items: center; justify-content: space-between;
+      font-size: .78rem; color: rgba(255,255,255,.3);
+    }
+    .footer-bottom a { color: rgba(255,255,255,.45); }
+    .footer-bottom a:hover { color: var(--gold); }
+
+    /* ── WHATSAPP FLOAT ─────────────────────────────────────── */
+    .wpp-float {
+      position: fixed; bottom: 24px; right: 24px; z-index: 200;
+      width: 58px; height: 58px;
+      background: #25d366;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,.5);
+      transition: .25s;
+      cursor: pointer;
+    }
+    .wpp-float:hover { transform: scale(1.1); box-shadow: 0 8px 32px rgba(37,211,102,.6); }
+
+    /* ── RESPONSIVE ─────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+
+      .service-block {
+        grid-template-columns: 1fr;
+        direction: ltr !important;
+      }
+      .service-block.reverse > * { direction: ltr; }
+      .service-img { min-height: 260px; }
+
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+
+      .service-content { padding: 36px 28px; }
+    }
+
+    @media (max-width: 600px) {
+      .hero-ctas { flex-direction: column; }
+      .hero-stats { gap: 24px; }
+      .footer-links { flex-direction: column; gap: 28px; }
+      .contact-form { padding: 28px 22px; }
+    }
+
+    /* ── SCROLL REVEAL ──────────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── NAV ─────────────────────────────────────────────────── -->
+<nav>
+  <div class="nav-logo">
+    <img src="Property_1_1.png" alt="Techpro Solar" />
+  </div>
+  <ul class="nav-links">
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#numeros">Resultados</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contato" class="nav-cta">Orçamento Grátis</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#servicos" onclick="toggleMenu()">Serviços</a>
+  <a href="#numeros" onclick="toggleMenu()">Resultados</a>
+  <a href="#sobre" onclick="toggleMenu()">Sobre</a>
+  <a href="#faq" onclick="toggleMenu()">FAQ</a>
+  <a href="#contato" onclick="toggleMenu()" class="m-cta">📋 Solicitar Orçamento Grátis</a>
+</div>
+
+<!-- ─── HERO ─────────────────────────────────────────────────── -->
+<section class="hero" id="inicio">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Energia Solar · BESS · EV · Usinas</div>
+    <h1>
+      Sua conta de luz
+      <em>zerada.</em>
+    </h1>
+    <p class="hero-sub">
+      Economize até 95% na energia elétrica com soluções fotovoltaicas completas —
+      instalação, armazenamento, carregamento veicular e usinas de investimento.
+      Mais de 3.000 projetos executados.
+    </p>
+    <div class="hero-ctas">
+      <a href="#contato" class="btn-primary">
+        ☀️ Quero meu orçamento grátis
+      </a>
+      <a href="#servicos" class="btn-outline">
+        Ver serviços ↓
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <strong>+3.000</strong>
+        <span>Projetos realizados</span>
+      </div>
+      <div class="hero-stat">
+        <strong>95%</strong>
+        <span>Economia na conta</span>
+      </div>
+      <div class="hero-stat">
+        <strong>25 anos</strong>
+        <span>Vida útil garantida</span>
+      </div>
+      <div class="hero-stat">
+        <strong>3–5 anos</strong>
+        <span>Retorno do investimento</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TRUST BAR ─────────────────────────────────────────────── -->
+<div class="trust-bar" aria-hidden="true">
+  <div class="trust-ticker">
+    <!-- duplicated for seamless loop -->
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      CREA/CFT Registrado
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      Técnico Eletrotécnico Certificado
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      +3.000 Projetos no Portfólio
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      Instalador Solar Fotovoltaico
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      CNPJ 44.150.790/0001-67
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      Garantia de 25 Anos nos Painéis
+    </div>
+    <!-- duplicate -->
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      CREA/CFT Registrado
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      Técnico Eletrotécnico Certificado
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      +3.000 Projetos no Portfólio
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      Instalador Solar Fotovoltaico
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      CNPJ 44.150.790/0001-67
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      Garantia de 25 Anos nos Painéis
+    </div>
+  </div>
+</div>
+
+<!-- ─── WHY ──────────────────────────────────────────────────── -->
+<section class="why" id="porque">
+  <div class="reveal">
+    <div class="section-tag">Por que solar agora?</div>
+    <h2 class="section-title">A conta de luz só <em>sobe.</em><br>Sua geração, não.</h2>
+    <p class="section-lead">Com a tarifa de energia aumentando todo ano, quem já tem solar vê o retorno crescer enquanto o resto paga mais. Não espere mais.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card reveal">
+      <div class="why-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <h3>Economia imediata</h3>
+      <p>Desde o primeiro mês de operação, sua conta cai até 95%. O dinheiro que você pagava para a distribuidora fica no seu bolso.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      </div>
+      <h3>Retorno garantido</h3>
+      <p>Sistemas residenciais pagam o investimento em 3 a 5 anos. Depois disso, 20+ anos de energia quase gratuita.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <h3>Valoriza seu imóvel</h3>
+      <p>Imóveis com geração solar valem até 8% a mais no mercado. É um ativo, não um gasto.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+      </div>
+      <h3>Independência energética</h3>
+      <p>Com BESS, você fica protegido de apagões e aumentos tarifários. Energia 24h mesmo sem sol.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SERVICES ──────────────────────────────────────────────── -->
+<section class="services" id="servicos">
+  <div class="services-header reveal">
+    <div class="section-tag">Nossas Soluções</div>
+    <h2 class="section-title">Tudo que você precisa<br>em <em>energia inteligente</em></h2>
+    <p class="section-lead">Do projeto ao comissionamento — e além. Soluções técnicas completas com responsabilidade de engenharia em cada etapa.</p>
+  </div>
+
+  <!-- 1. SOLAR -->
+  <div class="service-block reveal" id="solar">
+    <div class="service-img">
+      <div class="service-img-bg sbg-solar" style="min-height:360px;position:relative;">
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+          <div style="text-align:center;color:white;">
+            <div style="font-size:100px;opacity:.3;filter:grayscale(1) brightness(3);">☀️</div>
+            <div style="font-family:var(--font-display);font-size:3rem;font-weight:900;letter-spacing:.04em;opacity:.25;">SOLAR</div>
+          </div>
+        </div>
+        <div style="position:absolute;top:60px;left:50%;transform:translateX(-50%);">
+          <div style="width:180px;height:180px;border-radius:50%;border:3px dashed rgba(245,168,0,.3);animation:spin 20s linear infinite;"></div>
+        </div>
+        <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,75,62,.5) 0%,transparent 60%);"></div>
+        <div class="service-img-tag">Fotovoltaico</div>
+        <!-- decorative solar rays -->
+        <svg style="position:absolute;bottom:20px;right:20px;opacity:.15;" width="120" height="120" viewBox="0 0 120 120" fill="none"><circle cx="60" cy="60" r="30" stroke="#F5A800" stroke-width="6"/><line x1="60" y1="0" x2="60" y2="20" stroke="#F5A800" stroke-width="4" stroke-linecap="round"/><line x1="60" y1="100" x2="60" y2="120" stroke="#F5A800" stroke-width="4" stroke-linecap="round"/><line x1="0" y1="60" x2="20" y2="60" stroke="#F5A800" stroke-width="4" stroke-linecap="round"/><line x1="100" y1="60" x2="120" y2="60" stroke="#F5A800" stroke-width="4" stroke-linecap="round"/><line x1="14.6" y1="14.6" x2="28.3" y2="28.3" stroke="#F5A800" stroke-width="4" stroke-linecap="round"/><line x1="91.7" y1="91.7" x2="105.4" y2="105.4" stroke="#F5A800" stroke-width="4" stroke-linecap="round"/><line x1="105.4" y1="14.6" x2="91.7" y2="28.3" stroke="#F5A800" stroke-width="4" stroke-linecap="round"/><line x1="28.3" y1="91.7" x2="14.6" y2="105.4" stroke="#F5A800" stroke-width="4" stroke-linecap="round"/></svg>
+      </div>
+    </div>
+    <div class="service-content">
+      <div class="section-tag">Energia Solar Fotovoltaica</div>
+      <h2>Até <span>95%</span> de economia<br>na sua conta de luz</h2>
+      <div class="data-pill">
+        <div class="data-pill-item"><strong>95%</strong><small>Economia máx.</small></div>
+        <div class="data-pill-item"><strong>25 anos</strong><small>Vida útil</small></div>
+        <div class="data-pill-item"><strong>3–5 anos</strong><small>Payback</small></div>
+      </div>
+      <p>
+        Projetamos, dimensionamos e instalamos sistemas fotovoltaicos para residências, comércios e indústrias.
+        Cada projeto é calculado individualmente por técnico eletrotécnico registrado, com ART emitida e documentação completa para aprovação na distribuidora.
+      </p>
+      <ul class="feature-list">
+        <li>Dimensionamento técnico personalizado (geração × consumo)</li>
+        <li>Painéis de alta eficiência — Tier 1 do mercado</li>
+        <li>Inversores com monitoramento em tempo real</li>
+        <li>Aprovação junto à distribuidora (ANEEL)</li>
+        <li>ART, memorial de cálculo e projeto elétrico inclusos</li>
+        <li>Sistema on-grid, off-grid ou híbrido</li>
+      </ul>
+      <a href="#contato" class="btn-service">☀️ Quero meu projeto solar →</a>
+    </div>
+  </div>
+
+  <!-- 2. BESS -->
+  <div class="service-block reverse reveal" id="bess">
+    <div class="service-img">
+      <div class="service-img-bg sbg-bess" style="min-height:360px;position:relative;">
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" style="opacity:.3"><rect x="10" y="20" width="60" height="40" rx="8" stroke="white" stroke-width="4"/><rect x="30" y="10" width="20" height="12" rx="4" fill="white" opacity=".4"/><line x1="25" y1="40" x2="55" y2="40" stroke="#F5A800" stroke-width="4" stroke-linecap="round"/><line x1="40" y1="30" x2="40" y2="50" stroke="#F5A800" stroke-width="4" stroke-linecap="round"/></svg>
+          <div style="font-family:var(--font-display);font-size:2.5rem;font-weight:900;letter-spacing:.04em;opacity:.2;color:white;">BESS</div>
+        </div>
+        <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(15,52,96,.5) 0%,transparent 60%);"></div>
+        <div class="service-img-tag">Armazenamento</div>
+      </div>
+    </div>
+    <div class="service-content">
+      <div class="section-tag">BESS — Battery Energy Storage System</div>
+      <h2>Energia solar <span>24 horas</span>,<br>mesmo sem sol</h2>
+      <div class="data-pill">
+        <div class="data-pill-item"><strong>24h</strong><small>Disponibilidade</small></div>
+        <div class="data-pill-item"><strong>10+ anos</strong><small>Vida útil baterias</small></div>
+        <div class="data-pill-item"><strong>Zero</strong><small>Dependência da rede</small></div>
+      </div>
+      <p>
+        Sistemas BESS (Battery Energy Storage System) armazenam o excedente solar para consumo noturno ou em emergências.
+        Ideal para quem quer independência total da distribuidora ou proteção contra apagões.
+        Trabalhamos com tecnologia LiFePO₄ de última geração — a mais segura e durável do mercado.
+      </p>
+      <ul class="feature-list">
+        <li>Tecnologia LiFePO₄ — ciclos de vida superiores</li>
+        <li>Integração com qualquer inversor híbrido</li>
+        <li>Proteção contra falta de energia (UPS solar)</li>
+        <li>Redução da demanda nos horários de pico tarifário</li>
+        <li>Monitoramento remoto em tempo real</li>
+        <li>Escalável conforme sua demanda cresce</li>
+      </ul>
+      <a href="#contato" class="btn-service">🔋 Saber mais sobre BESS →</a>
+    </div>
+  </div>
+
+  <!-- 3. EV CHARGING -->
+  <div class="service-block reveal" id="ev">
+    <div class="service-img">
+      <div class="service-img-bg sbg-ev" style="min-height:360px;position:relative;">
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;">
+          <div style="font-size:90px;opacity:.25;filter:grayscale(1) brightness(3);">⚡</div>
+          <div style="font-family:var(--font-display);font-size:2rem;font-weight:900;letter-spacing:.04em;opacity:.2;color:white;">EV CHARGING</div>
+        </div>
+        <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(29,78,30,.5) 0%,transparent 60%);"></div>
+        <div class="service-img-tag">EV · Eletroposto</div>
+      </div>
+    </div>
+    <div class="service-content">
+      <div class="section-tag">Carregadores Elétricos Veiculares</div>
+      <h2>Carregue seu carro<br><span>e ainda lucre</span> com isso</h2>
+      <div class="data-pill">
+        <div class="data-pill-item"><strong>AC/DC</strong><small>Padrões disponíveis</small></div>
+        <div class="data-pill-item"><strong>7–150 kW</strong><small>Potência de carga</small></div>
+        <div class="data-pill-item"><strong>ROI</strong><small>Eletroposto público</small></div>
+      </div>
+      <p>
+        Instalamos carregadores residenciais para uso próprio e eletropostos comerciais para geração de renda.
+        Com energia solar integrada, você abastece seu veículo elétrico essencialmente de graça — e ainda pode vender
+        energia de recarga para outros motoristas, transformando o carregador em fonte de receita.
+      </p>
+      <ul class="feature-list">
+        <li>Wall Box residencial — carregamento noturno inteligente</li>
+        <li>Eletroposto público (AC e DC Fast Charge)</li>
+        <li>Padrões: Type 2, CCS, CHAdeMO, GB/T</li>
+        <li>Integração com solar para custo zero de recarga</li>
+        <li>Sistema de cobrança por kWh para eletroposto</li>
+        <li>Gestão remota da sessão de carregamento</li>
+      </ul>
+      <a href="#contato" class="btn-service">⚡ Quero meu carregador EV →</a>
+    </div>
+  </div>
+
+  <!-- 4. USINAS -->
+  <div class="service-block reverse reveal" id="usinas">
+    <div class="service-img">
+      <div class="service-img-bg sbg-usina" style="min-height:360px;position:relative;">
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;">
+          <div style="font-size:80px;opacity:.25;filter:grayscale(1) brightness(3);">🏭</div>
+          <div style="font-family:var(--font-display);font-size:2rem;font-weight:900;letter-spacing:.04em;opacity:.2;color:white;">USINA</div>
+        </div>
+        <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(74,45,15,.6) 0%,transparent 60%);"></div>
+        <div class="service-img-tag">Investimento</div>
+      </div>
+    </div>
+    <div class="service-content">
+      <div class="section-tag">Usinas de Investimento</div>
+      <h2>Invista em energia<br><span>e receba todo mês</span></h2>
+      <div class="data-pill">
+        <div class="data-pill-item"><strong>12–18%</strong><small>Retorno ao ano</small></div>
+        <div class="data-pill-item"><strong>20+ anos</strong><small>Contrato de receita</small></div>
+        <div class="data-pill-item"><strong>Passivo</strong><small>Renda mensal</small></div>
+      </div>
+      <p>
+        Você investe na construção de uma usina solar fotovoltaica e recebe mensalmente pela energia gerada e vendida.
+        Um ativo real, com lastro físico, que gera renda passiva previsível por décadas — protegido da inflação
+        e sem a volatilidade de outros investimentos.
+      </p>
+      <ul class="feature-list">
+        <li>Retorno estimado: 12% a 18% ao ano (IPCA+)</li>
+        <li>Contratos PPA de longo prazo com compradores</li>
+        <li>Documentação e memorial de cálculo inclusos</li>
+        <li>Acesso a geração distribuída (ANEEL REN 1000)</li>
+        <li>Relatórios mensais de geração e faturamento</li>
+        <li>Modalidades: individual, cotas ou fundo compartilhado</li>
+      </ul>
+      <a href="#contato" class="btn-service">💰 Quero investir em energia →</a>
+    </div>
+  </div>
+
+  <!-- 5. INSTALAÇÃO -->
+  <div class="service-block reveal" id="instalacao">
+    <div class="service-img">
+      <div class="service-img-bg sbg-install" style="min-height:360px;position:relative;">
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;">
+          <div style="font-size:80px;opacity:.25;filter:grayscale(1) brightness(3);">🔧</div>
+          <div style="font-family:var(--font-display);font-size:1.8rem;font-weight:900;letter-spacing:.04em;opacity:.2;color:white;">INSTALAÇÃO</div>
+        </div>
+        <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,10,46,.6) 0%,transparent 60%);"></div>
+        <div class="service-img-tag">Serviços Técnicos</div>
+      </div>
+    </div>
+    <div class="service-content">
+      <div class="section-tag">Instalação & Comissionamento</div>
+      <h2>Execução técnica<br><span>sem improviso</span></h2>
+      <div class="data-pill">
+        <div class="data-pill-item"><strong>ART</strong><small>Em cada projeto</small></div>
+        <div class="data-pill-item"><strong>CREA/CFT</strong><small>Registrado</small></div>
+        <div class="data-pill-item"><strong>NBR</strong><small>Normas seguidas</small></div>
+      </div>
+      <p>
+        Instalação profissional de sistemas de geração fotovoltaica com responsabilidade técnica assinada.
+        Atuo como instalador solar fotovoltaico certificado, com mais de 3.000 projetos no portfólio —
+        desde residências até plantas industriais. Cada obra segue rigorosamente as normas ABNT e determinações da ANEEL.
+      </p>
+      <ul class="feature-list">
+        <li>Laudo técnico e ART emitida pelo CREA</li>
+        <li>Instalação conforme ABNT NBR 16690 e 16149</li>
+        <li>Cabeamento, string box, aterramento e SPDA</li>
+        <li>Comissionamento e testes com equipamento calibrado</li>
+        <li>Treinamento ao cliente sobre operação do sistema</li>
+        <li>Suporte pós-instalação e manutenção preventiva</li>
+      </ul>
+      <a href="#contato" class="btn-service">🔧 Contratar instalação →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── INVEST BANNER ─────────────────────────────────────────── -->
+<div class="invest-banner">
+  <div class="invest-inner reveal">
+    <div class="section-tag" style="background:rgba(245,168,0,.2);border-color:rgba(245,168,0,.5);color:var(--gold);">Oportunidade única</div>
+    <h2>Eletroposto solar:<br>seu negócio gera <em>energia e receita.</em></h2>
+    <p>
+      Combine solar + BESS + carregador veicular e transforme seu estacionamento,
+      condomínio ou estabelecimento comercial em um eletroposto lucrativo.
+      Venda energia a R$ 2,50–4,00/kWh enquanto a produz por centavos.
+    </p>
+    <a href="#contato" class="btn-primary">⚡ Simular meu eletroposto →</a>
+  </div>
+</div>
+
+<!-- ─── NUMBERS ───────────────────────────────────────────────── -->
+<section class="numbers" id="numeros">
+  <div class="reveal">
+    <div class="section-tag">Nossos números</div>
+    <h2 class="section-title">Resultados que<br><em>falam por si</em></h2>
+  </div>
+  <div class="numbers-grid">
+    <div class="number-card reveal">
+      <strong>+3.000</strong>
+      <span>Projetos executados</span>
+    </div>
+    <div class="number-card reveal">
+      <strong>95%</strong>
+      <span>Economia média na conta</span>
+    </div>
+    <div class="number-card reveal">
+      <strong>25 anos</strong>
+      <span>Garantia dos painéis</span>
+    </div>
+    <div class="number-card reveal">
+      <strong>3–5 anos</strong>
+      <span>Payback médio residencial</span>
+    </div>
+    <div class="number-card reveal">
+      <strong>12%+</strong>
+      <span>Retorno a.a. em usinas</span>
+    </div>
+    <div class="number-card reveal">
+      <strong>10 anos</strong>
+      <span>Garantia inversores premium</span>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ABOUT ─────────────────────────────────────────────────── -->
+<section class="about-tech" id="sobre">
+  <div class="reveal">
+    <div class="section-tag">Quem somos</div>
+    <h2 class="section-title">Engenharia real.<br><em>Resultado garantido.</em></h2>
+    <p class="section-lead">A Techpro Solar nasce de mais de uma década de atuação em eletrotécnica industrial. Não somos revendedores: somos técnicos que projetam, instalam e respondem tecnicamente por cada sistema.</p>
+  </div>
+  <div class="about-grid">
+    <div class="reveal">
+      <p style="color:var(--gray-700);line-height:1.75;margin-bottom:20px;">
+        Com registro ativo no <strong>CREA/CFT</strong> e mais de <strong>3.000 projetos</strong> no portfólio técnico,
+        a Techpro Solar oferece o que poucos integradores do mercado podem: responsabilidade técnica real,
+        com ART emitida em cada projeto.
+      </p>
+      <p style="color:var(--gray-700);line-height:1.75;margin-bottom:28px;">
+        Atuamos em energia solar fotovoltaica, armazenamento BESS, infraestrutura para veículos elétricos e
+        estruturação de usinas de investimento — sempre com documentação técnica completa e processos aprovados
+        junto à ANEEL e distribuidoras locais.
+      </p>
+      <div class="cert-badges">
+        <div class="badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          CREA/CFT Registrado
+        </div>
+        <div class="badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Instalador Fotovoltaico
+        </div>
+        <div class="badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          FEBRABAN Correspondente
+        </div>
+        <div class="badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          ABNT NBR 16690
+        </div>
+        <div class="badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          ART em cada projeto
+        </div>
+        <div class="badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Processo ANEEL
+        </div>
+      </div>
+    </div>
+    <div class="tech-visual reveal">
+      <div class="tech-metric">
+        <div class="tech-metric-label">Portfólio técnico</div>
+        <div class="tech-metric-value">3.000+ <small>projetos</small></div>
+        <div class="tech-metric-bar"><div class="tech-metric-fill" style="width:95%;"></div></div>
+      </div>
+      <div class="tech-metric">
+        <div class="tech-metric-label">Taxa de aprovação ANEEL</div>
+        <div class="tech-metric-value">100% <small>dos projetos</small></div>
+        <div class="tech-metric-bar"><div class="tech-metric-fill" style="width:100%;"></div></div>
+      </div>
+      <div class="tech-metric">
+        <div class="tech-metric-label">Satisfação do cliente</div>
+        <div class="tech-metric-value">98% <small>aprovação</small></div>
+        <div class="tech-metric-bar"><div class="tech-metric-fill" style="width:98%;"></div></div>
+      </div>
+      <div class="tech-metric">
+        <div class="tech-metric-label">Projetos entregues no prazo</div>
+        <div class="tech-metric-value">97% <small>no prazo</small></div>
+        <div class="tech-metric-bar"><div class="tech-metric-fill" style="width:97%;"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FAQ ──────────────────────────────────────────────────── -->
+<section class="faq" id="faq">
+  <div class="reveal">
+    <div class="section-tag">Dúvidas frequentes</div>
+    <h2 class="section-title">Perguntas <em>que todo<br>mundo faz</em></h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item reveal">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Quanto tempo leva para instalar um sistema solar?
+        <div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a">
+        Para sistemas residenciais, a instalação física leva de 1 a 3 dias úteis. O processo de aprovação junto à distribuidora (ANEEL) pode levar de 15 a 90 dias dependendo da concessionária. Cuidamos de todo o processo burocrático por você.
+      </div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Funciona em dias nublados ou chuvosos?
+        <div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a">
+        Sim. O sistema gera energia com luz difusa, não apenas com sol direto — com produção entre 10% e 25% do potencial máximo em dias encobertos. Com BESS (baterias), o excedente dos dias ensolarados garante energia à noite e em dias de pouco sol.
+      </div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Qual o tamanho de sistema que preciso?
+        <div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a">
+        O dimensionamento é personalizado com base no histórico de consumo (sua conta de luz) e na disponibilidade de área para instalação. Fornecemos um projeto técnico completo gratuitamente — sem compromisso.
+      </div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Posso financiar o sistema solar?
+        <div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a">
+        Sim. Trabalhamos com linhas de financiamento específicas para energia solar, como o Banco do Nordeste (FNE Solar), BNDES e bancos privados. As parcelas costumam ser menores do que a economia na conta de luz — ou seja, você lucra desde o primeiro mês.
+      </div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Como funciona o investimento em usina solar?
+        <div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a">
+        Você aporta o capital para construção de uma usina solar. A energia gerada é vendida via contratos PPA (Power Purchase Agreement) ou via geração distribuída (créditos ANEEL). O retorno mensal é previsível, lastreado em ativo físico, com estimativa de 12% a 18% ao ano indexado ao IPCA.
+      </div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Quais documentos são emitidos com o projeto?
+        <div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a">
+        Emitimos ART (Anotação de Responsabilidade Técnica) pelo CREA, memorial de cálculo, projeto elétrico conforme ABNT NBR 16690, diagrama unifilar, string plan e toda documentação necessária para aprovação na distribuidora e financiamento bancário.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT ───────────────────────────────────────────────── -->
+<section class="contact" id="contato">
+  <div class="reveal">
+    <div class="section-tag">Fale conosco</div>
+    <h2 class="section-title">Pronto para <em>economizar</em>?<br>Fale agora.</h2>
+    <p class="section-lead">Orçamento gratuito, sem compromisso. Respondemos em até 2 horas úteis.</p>
+  </div>
+  <div class="contact-grid">
+    <div class="reveal">
+      <div class="contact-info">
+        <h3>Fale diretamente conosco</h3>
+        <div class="contact-item">
+          <div class="contact-ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <strong>WhatsApp / Telefone</strong>
+            <a href="https://wa.me/5519992746549" target="_blank">(19) 99274-6549</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <strong>E-mail</strong>
+            <a href="mailto:contato@techprosolar.com.br">contato@techprosolar.com.br</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <strong>Horário de atendimento</strong>
+            <span>Seg–Sex: 8h às 18h | Sáb: 8h às 12h</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div>
+            <strong>Site</strong>
+            <a href="https://techprosolar.com.br" target="_blank">techprosolar.com.br</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div>
+            <strong>CNPJ</strong>
+            <span>44.150.790/0001-67</span>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:32px;">
+        <a href="https://wa.me/5519992746549?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20de%20energia%20solar." 
+           target="_blank" 
+           class="btn-primary" 
+           style="display:inline-flex;background:#25d366;color:white;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Chamar no WhatsApp agora
+        </a>
+      </div>
+    </div>
+    <div class="contact-form reveal">
+      <h3>📋 Solicitar orçamento grátis</h3>
+      <div class="form-group">
+        <label>Nome completo *</label>
+        <input type="text" placeholder="Seu nome" id="f-nome" />
+      </div>
+      <div class="form-group">
+        <label>Telefone / WhatsApp *</label>
+        <input type="tel" placeholder="(11) 99999-9999" id="f-tel" />
+      </div>
+      <div class="form-group">
+        <label>E-mail</label>
+        <input type="email" placeholder="seuemail@exemplo.com" id="f-email" />
+      </div>
+      <div class="form-group">
+        <label>Serviço de interesse *</label>
+        <select id="f-servico">
+          <option value="">Selecione uma opção</option>
+          <option>Energia Solar Fotovoltaica</option>
+          <option>BESS — Armazenamento de Energia</option>
+          <option>Carregador EV Residencial</option>
+          <option>Eletroposto Comercial</option>
+          <option>Usina de Investimento</option>
+          <option>Instalação / Comissionamento</option>
+          <option>Dúvida geral</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Mensagem (opcional)</label>
+        <textarea placeholder="Conta mais sobre seu projeto ou dúvida..." id="f-msg"></textarea>
+      </div>
+      <button class="btn-form" onclick="sendWhatsApp()">
+        ☀️ Enviar via WhatsApp
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ────────────────────────────────────────────────── -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="Property_1_1.png" alt="Techpro Solar" style="filter:brightness(0) invert(1);" />
+      <p>Energia solar com engenharia de verdade.<br>CNPJ: 44.150.790/0001-67</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="#solar">Energia Solar</a></li>
+          <li><a href="#bess">BESS</a></li>
+          <li><a href="#ev">Carregador EV</a></li>
+          <li><a href="#usinas">Usinas de Investimento</a></li>
+          <li><a href="#instalacao">Instalação</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#numeros">Resultados</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="tel:+5519992746549">(19) 99274-6549</a></li>
+          <li><a href="mailto:contato@techprosolar.com.br">contato@techprosolar.com.br</a></li>
+          <li><a href="https://techprosolar.com.br">techprosolar.com.br</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Techpro Solar · CNPJ 44.150.790/0001-67 · Todos os direitos reservados.</span>
+    <span>Desenvolvido com ⚡ para o futuro da energia</span>
+  </div>
+</footer>
+
+<!-- ─── WHATSAPP FLOAT ─────────────────────────────────────────── -->
+<a class="wpp-float" href="https://wa.me/5519992746549?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" aria-label="WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<!-- ─── SCRIPTS ─────────────────────────────────────────────────── -->
+<script>
+  /* mobile menu */
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
+  /* faq accordion */
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  /* scroll reveal */
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => observer.observe(el));
+
+  /* whatsapp form */
+  function sendWhatsApp() {
+    const nome    = document.getElementById('f-nome').value.trim();
+    const tel     = document.getElementById('f-tel').value.trim();
+    const email   = document.getElementById('f-email').value.trim();
+    const servico = document.getElementById('f-servico').value;
+    const msg     = document.getElementById('f-msg').value.trim();
+
+    if (!nome || !tel || !servico) {
+      alert('Por favor, preencha nome, telefone e serviço de interesse.');
+      return;
+    }
+
+    let text = `Olá! Vim pelo site techprosolar.com.br e gostaria de um orçamento.%0A%0A`;
+    text += `*Nome:* ${encodeURIComponent(nome)}%0A`;
+    text += `*Telefone:* ${encodeURIComponent(tel)}%0A`;
+    if (email) text += `*E-mail:* ${encodeURIComponent(email)}%0A`;
+    text += `*Serviço:* ${encodeURIComponent(servico)}%0A`;
+    if (msg) text += `*Mensagem:* ${encodeURIComponent(msg)}%0A`;
+
+    window.open(`https://wa.me/5519992746549?text=${text}`, '_blank');
+  }
+
+  /* spin animation for solar ring in hero */
+  const style = document.createElement('style');
+  style.textContent = '@keyframes spin { from { transform: translateX(-50%) rotate(0deg); } to { transform: translateX(-50%) rotate(360deg); } }';
+  document.head.appendChild(style);
+</script>
+</body>
+</html>
