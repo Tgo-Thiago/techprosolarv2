@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechPro Solar — Energia Solar, Bombeamento Solar e Eficiência Energética | Campinas/SP</title>
+<meta name="description" content="Energia solar on-grid e híbrida com homologação, bombeamento solar com drives WEG, eficiência energética para Grupo A e engenharia para integradores. Projeto com TRT de técnico registrado no CFT.">
+<link rel="canonical" href="https://techprosolar.com.br/">
+<meta name="theme-color" content="#0C2445">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/favicon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TechPro Solar — Sua conta de luz analisada por quem assina o projeto">
+<meta property="og:description" content="Solar on-grid e híbrido, bombeamento solar, eficiência para Grupo A e manutenção. Mande sua conta de luz pelo WhatsApp.">
+<meta property="og:url" content="https://techprosolar.com.br/">
+<meta property="og:image" content="https://techprosolar.com.br/assets/og-techpro.jpg">
+<meta property="og:locale" content="pt_BR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "TechPro Solar",
+  "legalName": "Maranata Serviços Ltda",
+  "taxID": "44.150.790/0001-67",
+  "description": "Energia solar on-grid e híbrida, bombeamento solar, eficiência energética para Grupo A, manutenção de usinas e engenharia para integradores.",
+  "url": "https://techprosolar.com.br/",
+  "image": "https://techprosolar.com.br/assets/og-techpro.jpg",
+  "logo": "https://techprosolar.com.br/assets/techpro-logo-claro.png",
+  "telephone": "+55-19-99274-6549",
+  "email": "contato@techprosolar.com.br",
+  "address": {"@type": "PostalAddress", "addressLocality": "Campinas", "addressRegion": "SP", "addressCountry": "BR"},
+  "areaServed": "BR",
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "12:00"}
+  ]
+}
+</script>
+<style>
+:root{
+  /* Paleta do logo TechPro Solar */
+  --navy:#0C2445; --navy-2:#13305A; --navy-3:#1C3D6E;
+  --sun:#FBB401; --sun-d:#9A6B00; --sky:#2E9BDA;
+  --ink:#0F1A24; --muted:#5B6975; --line:#E1E6EB;
+  --paper:#FFFFFF; --mist:#F6F4EF;
+  --r:14px; --max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{font-family:Poppins,Inter,sans-serif;line-height:1.15;letter-spacing:-.01em}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+.ico{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* header */
+.top{position:sticky;top:0;z-index:50;background:rgba(12,36,69,.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.06)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff}
+.brand img{height:48px;width:auto}
+.nav{display:flex;align-items:center;gap:2px}
+.nav a{color:#C8D3DC;text-decoration:none;font-size:.88rem;font-weight:500;padding:8px 11px;border-radius:8px}
+.nav a:hover{color:#fff;background:rgba(255,255,255,.06)}
+.nav .cta{background:var(--sun);color:var(--navy);font-weight:600;margin-left:8px}
+.nav .cta:hover{background:#FFC533;color:var(--navy)}
+.burger{display:none;background:none;border:0;color:#fff;padding:8px;cursor:pointer}
+@media (max-width:1040px){
+  .burger{display:block}
+  .nav{position:absolute;top:72px;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--navy);padding:12px 20px 20px;gap:2px;display:none;border-bottom:1px solid rgba(255,255,255,.08)}
+  .nav.open{display:flex}
+  .nav .cta{margin:8px 0 0;text-align:center}
+}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:10px;font-weight:600;text-decoration:none;font-size:1rem;border:2px solid transparent;cursor:pointer;font-family:inherit}
+.btn-sun{background:var(--sun);color:var(--navy)}
+.btn-sun:hover{background:#FFB940}
+.btn-ghost{border-color:rgba(255,255,255,.3);color:#fff}
+.btn-ghost:hover{border-color:#fff}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-3)}
+
+/* hero */
+.hero{background:radial-gradient(900px 500px at 90% 0%,rgba(251,180,1,.16),transparent 60%),var(--navy);color:#fff;padding:72px 0 64px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.eyebrow{display:inline-block;font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--sun);margin-bottom:16px}
+.hero h1{font-size:clamp(2.1rem,4.6vw,3.4rem);font-weight:800;text-transform:uppercase}
+.hero h1 em{font-style:normal;color:var(--sun)}
+.hero p.lead{font-size:1.12rem;color:#C8D3DC;max-width:560px;margin:20px 0 28px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero-photo{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:6/7;box-shadow:0 30px 60px rgba(0,0,0,.35)}
+.hero-photo img{width:100%;height:100%;object-fit:cover}
+.hero-photo figcaption{position:absolute;left:14px;bottom:14px;right:14px;background:rgba(12,36,69,.85);backdrop-filter:blur(6px);padding:12px 14px;border-radius:10px;font-size:.85rem;color:#E6ECF1}
+.hero-photo figcaption b{color:var(--sun);font-family:Poppins}
+.proof{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:52px;border-top:1px solid rgba(255,255,255,.1);padding-top:30px}
+.proof b{display:block;font-family:Poppins;font-size:1.9rem;color:var(--sun);line-height:1}
+.proof span{font-size:.9rem;color:#9FB0BE}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr}.hero-photo{aspect-ratio:4/3}.proof{grid-template-columns:1fr;gap:16px}}
+
+/* sections */
+section{padding:84px 0}
+.alt{background:var(--mist)}
+.dark{background:var(--navy);color:#fff}
+.head{max-width:760px;margin-bottom:40px}
+.head .num{font-family:Poppins;font-weight:800;color:var(--sun-d);font-size:.85rem;letter-spacing:.12em;text-transform:uppercase}
+.dark .head .num{color:var(--sun)}
+.head h2{font-size:clamp(1.8rem,3.6vw,2.6rem);font-weight:800;margin:8px 0 14px;text-transform:uppercase}
+.head p{color:var(--muted);font-size:1.08rem}
+.dark .head p{color:#B3C1CD}
+
+/* entrada: conta de luz */
+.entry{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:e}
+.entry div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.entry div::before{counter-increment:e;content:"0" counter(e);display:block;font-family:Poppins;font-weight:800;color:var(--sun-d);font-size:1.3rem;margin-bottom:8px}
+.entry h3{font-size:1.02rem;margin-bottom:6px}
+.entry p{font-size:.92rem;color:var(--muted)}
+@media (max-width:960px){.entry{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.entry{grid-template-columns:1fr}}
+
+/* service split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.split.rev .media{order:2}
+.media{border-radius:var(--r);overflow:hidden;aspect-ratio:4/3}
+.media img{width:100%;height:100%;object-fit:cover}
+.checks{list-style:none;display:grid;gap:10px;margin:6px 0 26px}
+.checks li{padding-left:30px;position:relative;color:#2E3B46}
+.dark .checks li{color:#D2DCE4}
+.checks li::before{content:"";position:absolute;left:2px;top:7px;width:14px;height:8px;border-left:2px solid var(--sun-d);border-bottom:2px solid var(--sun-d);transform:rotate(-45deg)}
+.dark .checks li::before{border-color:var(--sun)}
+@media (max-width:860px){.split{grid-template-columns:1fr}.split.rev .media{order:0}}
+
+/* bombeamento */
+.lines{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
+.line{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:26px}
+.line .tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);background:var(--sun);padding:4px 10px;border-radius:99px;margin-bottom:12px}
+.line h3{font-size:1.35rem;margin-bottom:4px}
+.line .range{font-family:Poppins;color:var(--sun);font-weight:700;margin-bottom:12px}
+.line p{color:#B3C1CD;font-size:.95rem;margin-bottom:14px}
+.line ul{list-style:none;display:grid;gap:8px}
+.line li{font-size:.92rem;color:#D2DCE4;padding-left:22px;position:relative}
+.line li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:50%;background:var(--sun)}
+.note-box{margin-top:16px;padding:18px 20px;border-radius:12px;background:rgba(46,155,218,.12);border:1px solid rgba(46,155,218,.3);font-size:.93rem;color:#D2DCE4}
+.note-box b{color:#fff}
+@media (max-width:860px){.lines{grid-template-columns:1fr}}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.card .iw{width:46px;height:46px;border-radius:12px;background:rgba(251,180,1,.16);color:var(--sun-d);display:grid;place-items:center;margin-bottom:14px}
+.card h3{font-size:1.05rem;margin-bottom:6px}
+.card p{font-size:.93rem;color:var(--muted)}
+@media (max-width:960px){.cards{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.cards{grid-template-columns:1fr}}
+
+/* B2B */
+.b2b{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}
+.quote{font-family:Poppins;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;line-height:1.2;margin-bottom:18px}
+.quote em{font-style:normal;color:var(--sun)}
+.deliv{display:grid;gap:12px}
+.deliv > div{display:flex;gap:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px 18px}
+.deliv .ico{color:var(--sun);margin-top:2px}
+.deliv b{display:block;font-family:Poppins;font-size:.98rem}
+.deliv span{font-size:.9rem;color:#B3C1CD}
+@media (max-width:860px){.b2b{grid-template-columns:1fr}}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:12px}
+.gallery figure{position:relative;border-radius:12px;overflow:hidden;background:#ddd}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.gallery figure:hover img{transform:scale(1.04)}
+.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:24px 14px 10px;background:linear-gradient(transparent,rgba(0,0,0,.65));color:#fff;font-size:.82rem;font-weight:500}
+.g-tall{grid-row:span 2}
+.g-wide{grid-column:span 2}
+@media (max-width:860px){.gallery{grid-template-columns:1fr 1fr;grid-auto-rows:180px}}
+
+/* about */
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:center}
+.about .portrait{border-radius:var(--r);overflow:hidden;aspect-ratio:9/10}
+.about .portrait img{width:100%;height:100%;object-fit:cover}
+.about p{color:#2E3B46;margin-bottom:14px}
+.creds{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+.creds div{background:var(--mist);border-radius:12px;padding:14px 16px;font-size:.88rem}
+.creds b{display:block;font-family:Poppins;font-size:1.05rem;color:var(--ink)}
+.creds span{color:var(--muted)}
+@media (max-width:860px){.about{grid-template-columns:1fr}.creds{grid-template-columns:1fr}}
+
+/* faq */
+.faq{display:grid;gap:10px;max-width:860px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.faq summary{cursor:pointer;font-family:Poppins;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::after{content:"+";color:var(--sun-d);font-size:1.3rem;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq p{margin-top:10px;color:#3A4854;font-size:.96rem}
+
+/* CTA bar */
+.bar{margin-top:34px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;background:linear-gradient(90deg,var(--sun-d),var(--sun));color:var(--navy);border-radius:var(--r);padding:24px 28px}
+.bar b{font-family:Poppins;font-size:1.2rem;display:block}
+.bar .btn{background:var(--navy);color:#fff}
+
+/* contact */
+.contact{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px}
+.cinfo{display:grid;gap:14px;align-content:start}
+.ci{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.ci .ico{color:var(--sun-d);margin-top:2px}
+.ci small{display:block;font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.ci a,.ci span{font-weight:600;text-decoration:none}
+form{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+form .full{grid-column:1/-1}
+label{font-size:.85rem;font-weight:600;display:block;margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;font-size:.97rem;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:#FCFCFB;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--sky);outline-offset:1px;border-color:transparent}
+textarea{min-height:110px;resize:vertical}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:.85rem;color:var(--muted);font-weight:400}
+.consent input{width:18px;height:18px;margin-top:2px;flex:none}
+form .btn{justify-content:center;width:100%}
+.form-note{font-size:.8rem;color:var(--muted);text-align:center}
+@media (max-width:860px){.contact{grid-template-columns:1fr}form{grid-template-columns:1fr}}
+
+/* footer */
+footer{background:#081A33;color:#9FB0BE;padding:56px 0 28px;font-size:.9rem}
+.fgrid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px}
+footer .brand{margin-bottom:14px}
+footer h4{color:#fff;font-size:.95rem;margin-bottom:12px}
+footer ul{list-style:none;display:grid;gap:6px}
+footer a{text-decoration:none;color:#9FB0BE}
+footer a:hover{color:#fff}
+.legal{border-top:1px solid rgba(255,255,255,.08);margin-top:36px;padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.82rem}
+details.priv{margin-top:20px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:14px 18px}
+details.priv summary{cursor:pointer;color:#fff;font-weight:600}
+details.priv p{margin-top:10px;font-size:.85rem;line-height:1.7}
+@media (max-width:760px){.fgrid{grid-template-columns:1fr}}
+
+.wa{position:fixed;right:20px;bottom:20px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+.wa svg{width:30px;height:30px;fill:#fff}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 2.7S5 10 5 14.5a7 7 0 0 0 14 0C19 10 12 2.7 12 2.7z"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></symbol>
+  <symbol id="i-battery" viewBox="0 0 24 24"><rect x="2" y="7" width="18" height="10" rx="2"/><path d="M22 11v2M6 11v2M10 11v2"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M12 14l4-4"/><path d="M3.3 19a10 10 0 1 1 17.4 0"/></symbol>
+  <symbol id="i-swap" viewBox="0 0 24 24"><path d="M17 3l4 4-4 4M3 7h18M7 21l-4-4 4-4M21 17H3"/></symbol>
+  <symbol id="i-brush" viewBox="0 0 24 24"><path d="M3 21c3 0 5-2 5-5l9-9a2.1 2.1 0 0 0-3-3l-9 9c-3 0-5 2-5 5"/><path d="M14 6l4 4"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 6-10 7L2 6"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a href="#home" class="brand" aria-label="TechPro Solar — início"><img src="assets/techpro-logo-escuro.png" alt="TechPro Solar" width="178" height="48"></a>
+    <button class="burger" aria-label="Abrir menu" aria-expanded="false" onclick="toggleNav(this)">
+      <svg class="ico" style="width:28px;height:28px"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2"/></svg>
+    </button>
+    <nav class="nav" id="nav">
+      <a href="#solar">Energia Solar</a>
+      <a href="#bombeamento">Bombeamento</a>
+      <a href="#grupo-a">Grupo A</a>
+      <a href="#manutencao">Manutenção</a>
+      <a href="#integradores">Integradores</a>
+      <a href="#obras">Obras</a>
+      <a href="#contato" class="cta">Mandar Conta de Luz</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Energia solar · Bombeamento · Eficiência energética</span>
+        <h1>Sua conta de luz analisada por <em>quem assina o projeto.</em></h1>
+        <p class="lead">Antes de vender qualquer equipamento, olhamos a sua conta. Daí sai a solução certa: solar, bombeamento solar, correção de reativos, mercado livre ou baterias — com projeto e TRT de técnico registrado.</p>
+        <div class="hero-actions">
+          <a class="btn btn-sun" href="https://wa.me/5519992746549?text=Ol%C3%A1%21%20Quero%20que%20analisem%20minha%20conta%20de%20luz." target="_blank" rel="noopener"><svg class="ico"><use href="#i-chat"/></svg>Mandar minha conta no WhatsApp</a>
+          <a class="btn btn-ghost" href="#obras">Ver obras</a>
+        </div>
+      </div>
+      <figure class="hero-photo">
+        <img src="assets/obras/hero-telhado-residencial.jpg" alt="Sistema fotovoltaico instalado em telhado residencial" width="1200" height="1400">
+        <figcaption><b>Obra TechPro</b> · Sistema residencial instalado e homologado</figcaption>
+      </figure>
+    </div>
+    <div class="proof">
+      <div><b>+3.000</b><span>projetos técnicos executados</span></div>
+      <div><b>CFT</b><span>técnico em eletrotécnica registrado, com TRT em cada projeto</span></div>
+      <div><b>Do projeto à ligação</b><span>dimensionamento, instalação e homologação na distribuidora</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="alt" id="como">
+  <div class="wrap">
+    <div class="head">
+      <span class="num">Como começa</span>
+      <h2>Tudo começa pela sua conta de luz</h2>
+      <p>Não existe solução padrão. Uma conta residencial, uma fazenda com bomba de 100 CV e uma indústria no Grupo A pedem respostas diferentes.</p>
+    </div>
+    <div class="entry">
+      <div><h3>Você manda a conta</h3><p>Foto ou PDF pelo WhatsApp. Se tiver contrato de mercado livre ou de GD, mande junto.</p></div>
+      <div><h3>Fazemos o diagnóstico</h3><p>Consumo, demanda, reativos, tarifa e horário de uso. Onde o dinheiro está indo.</p></div>
+      <div><h3>Você recebe a proposta</h3><p>A solução que fecha a conta, com números e premissas explicados — não promessa.</p></div>
+      <div><h3>Executamos com TRT</h3><p>Projeto, instalação, homologação e documentação assinados por técnico registrado.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLAR -->
+<section id="solar">
+  <div class="wrap split">
+    <div class="media"><img src="assets/obras/residencial-ceramica.jpg" alt="Módulos fotovoltaicos em telhado cerâmico" loading="lazy" width="1200" height="900"></div>
+    <div>
+      <div class="head" style="margin-bottom:18px">
+        <span class="num">Serviço 01</span>
+        <h2>Energia solar on-grid e híbrida</h2>
+        <p>Sistemas para residências, comércios e propriedades rurais, com a homologação na distribuidora inclusa.</p>
+      </div>
+      <ul class="checks">
+        <li>Dimensionamento pelo seu histórico de consumo real</li>
+        <li>On-grid, híbrido com baterias ou off-grid, conforme o caso</li>
+        <li>Homologação completa: projeto, unifilar e acompanhamento na CPFL e demais distribuidoras</li>
+        <li>Usina remota para compensar contas em outro endereço (autoconsumo remoto)</li>
+        <li>Instalação conforme NBR 16690 e NBR 5410, com TRT e memorial de cálculo</li>
+      </ul>
+      <a class="btn btn-navy" href="https://wa.me/5519992746549?text=Ol%C3%A1%21%20Quero%20um%20or%C3%A7amento%20de%20energia%20solar." target="_blank" rel="noopener"><svg class="ico"><use href="#i-chat"/></svg>Quero um orçamento solar</a>
+    </div>
+  </div>
+</section>
+
+<!-- BOMBEAMENTO -->
+<section class="dark" id="bombeamento">
+  <div class="wrap">
+    <div class="head">
+      <span class="num">Serviço 02</span>
+      <h2>Bombeamento solar</h2>
+      <p>Para irrigação, abastecimento e transferência de água. A bomba trifásica que você já tem passa a funcionar com o sol, acionada por drive dedicado — sem baterias.</p>
+    </div>
+    <div class="lines">
+      <div class="line">
+        <span class="tag">Kit de catálogo</span>
+        <h3>Linha Compacta</h3>
+        <div class="range">1 a 30 CV</div>
+        <p>Kit fechado com drive solar WEG CFW500 e arranjo fotovoltaico dimensionado para o seu motor.</p>
+        <ul><li>Motor 220 V ou 380/440 V</li><li>Bombeamento direto, sem bateria</li><li>Proposta rápida pela potência do motor</li></ul>
+      </div>
+      <div class="line">
+        <span class="tag">Sob projeto</span>
+        <h3>Linha Engenharia</h3>
+        <div class="range">40 a 100 CV</div>
+        <p>Drives WEG CFW11 ou CFW700 com projeto fotovoltaico feito para a curva da sua bomba e da sua adutora.</p>
+        <ul><li>Estudo hidráulico e elétrico do conjunto</li><li>Operação híbrida com a rede quando necessário</li><li>Para clientes do Grupo A e B optante</li></ul>
+      </div>
+    </div>
+    <div class="note-box"><b>E quando passa nuvem?</b> Em bombeamento direto a vazão acompanha o sol. Quando a operação precisa de carga plena o dia todo, projetamos o sistema híbrido: o sol é a fonte principal e a rede complementa.</div>
+    <div class="bar">
+      <div><b>Tem uma bomba que pesa na conta?</b><span>Mande a placa do motor e a conta de luz — devolvemos o pré-dimensionamento.</span></div>
+      <a class="btn" href="https://wa.me/5519992746549?text=Ol%C3%A1%21%20Quero%20bombeamento%20solar%20para%20minha%20bomba." target="_blank" rel="noopener"><svg class="ico"><use href="#i-chat"/></svg>Falar sobre bombeamento</a>
+    </div>
+  </div>
+</section>
+
+<!-- GRUPO A -->
+<section id="grupo-a">
+  <div class="wrap">
+    <div class="head">
+      <span class="num">Serviço 03</span>
+      <h2>Eficiência energética para Grupo A</h2>
+      <p>Para indústrias, comércios e propriedades rurais em média tensão. Muitas vezes a maior economia não exige nenhum equipamento novo.</p>
+    </div>
+    <div class="cards">
+      <div class="card"><div class="iw"><svg class="ico"><use href="#i-chart"/></svg></div><h3>Análise da fatura</h3><p>Demanda contratada, ultrapassagens, modalidade tarifária e horário de ponta.</p></div>
+      <div class="card"><div class="iw"><svg class="ico"><use href="#i-gauge"/></svg></div><h3>Correção de reativos</h3><p>Banco de capacitores dimensionado para eliminar a multa por baixo fator de potência.</p></div>
+      <div class="card"><div class="iw"><svg class="ico"><use href="#i-swap"/></svg></div><h3>Mercado livre e GD</h3><p>Avaliação de migração para o mercado livre ou compra de energia por geração distribuída.</p></div>
+      <div class="card"><div class="iw"><svg class="ico"><use href="#i-battery"/></svg></div><h3>Armazenamento (BESS)</h3><p>Baterias para reduzir demanda no horário de ponta e garantir cargas críticas.</p></div>
+      <div class="card"><div class="iw"><svg class="ico"><use href="#i-bolt"/></svg></div><h3>Motores e acionamentos</h3><p>Troca de motores e inversores de frequência onde o retorno se justifica.</p></div>
+      <div class="card"><div class="iw"><svg class="ico"><use href="#i-sun"/></svg></div><h3>Geração solar</h3><p>Usina própria quando o diagnóstico mostra que ela fecha a conta.</p></div>
+    </div>
+    <div class="bar">
+      <div><b>Indústria ou fazenda em média tensão?</b><span>Mande as últimas faturas e, se tiver, os contratos de energia.</span></div>
+      <a class="btn" href="https://wa.me/5519992746549?text=Ol%C3%A1%21%20Quero%20uma%20an%C3%A1lise%20de%20efici%C3%AAncia%20para%20Grupo%20A." target="_blank" rel="noopener"><svg class="ico"><use href="#i-chat"/></svg>Pedir análise Grupo A</a>
+    </div>
+  </div>
+</section>
+
+<!-- MANUTENÇÃO -->
+<section class="alt" id="manutencao">
+  <div class="wrap split rev">
+    <div class="media"><img src="assets/obras/inversores-string-box.jpg" alt="Inversores e string boxes em montagem" loading="lazy" width="1200" height="900"></div>
+    <div>
+      <div class="head" style="margin-bottom:18px">
+        <span class="num">Serviço 04</span>
+        <h2>Manutenção e monitoramento</h2>
+        <p>Sistema sujo, inversor em alarme ou aplicativo que parou de mostrar a geração? A usina pode estar produzindo menos do que deveria sem você saber.</p>
+      </div>
+      <ul class="checks">
+        <li>Limpeza dos módulos</li>
+        <li>Inspeção elétrica: string box, proteções, conexões e aterramento</li>
+        <li>Verificação e reconfiguração do aplicativo de monitoramento</li>
+        <li>Diagnóstico de alarmes e queda de geração</li>
+        <li>Serviço avulso ou contrato recorrente</li>
+      </ul>
+      <a class="btn btn-navy" href="https://wa.me/5519992746549?text=Ol%C3%A1%21%20Preciso%20de%20manuten%C3%A7%C3%A3o%20no%20meu%20sistema%20solar." target="_blank" rel="noopener"><svg class="ico"><use href="#i-chat"/></svg>Agendar manutenção</a>
+    </div>
+  </div>
+</section>
+
+<!-- INTEGRADORES -->
+<section class="dark" id="integradores">
+  <div class="wrap b2b">
+    <div>
+      <div class="head" style="margin-bottom:20px">
+        <span class="num">Para integradores e vendedores</span>
+        <h2>Engenharia terceirizada</h2>
+      </div>
+      <p class="quote">Você vende, <em>eu entrego a engenharia.</em></p>
+      <p style="color:#B3C1CD;margin-bottom:24px">Para integradores que vendem bem mas não querem montar um departamento técnico. Você cuida do cliente; o projeto, a homologação e a responsabilidade técnica ficam com a gente.</p>
+      <a class="btn btn-sun" href="https://wa.me/5519992746549?text=Ol%C3%A1%21%20Sou%20integrador%20e%20quero%20terceirizar%20engenharia." target="_blank" rel="noopener"><svg class="ico"><use href="#i-chat"/></svg>Quero ser parceiro</a>
+    </div>
+    <div class="deliv">
+      <div><svg class="ico"><use href="#i-pencil"/></svg><div><b>Dimensionamento</b><span>Solar on-grid, híbrido com BESS e bombeamento solar.</span></div></div>
+      <div><svg class="ico"><use href="#i-doc"/></svg><div><b>Projeto e homologação</b><span>Unifilar, formulários e acompanhamento na distribuidora.</span></div></div>
+      <div><svg class="ico"><use href="#i-shield"/></svg><div><b>TRT e memorial de cálculo</b><span>Responsabilidade técnica de profissional registrado no CFT.</span></div></div>
+      <div><svg class="ico"><use href="#i-layers"/></svg><div><b>Pacotes para parceiros</b><span>Condições para quem manda projetos com frequência.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- OBRAS -->
+<section id="obras">
+  <div class="wrap">
+    <div class="head">
+      <span class="num">Obras</span>
+      <h2>Projetos executados</h2>
+      <p>Residências, comércios e galpões. Fotos de obras reais, tiradas em campo.</p>
+    </div>
+    <div class="gallery">
+      <figure class="g-tall"><img src="assets/obras/telhado-comercial.jpg" alt="Sistema em telhado de fibrocimento" loading="lazy"><figcaption>Telhado de fibrocimento</figcaption></figure>
+      <figure class="g-wide"><img src="assets/obras/galpao-comercial.jpg" alt="Thiago Santos em sistema comercial sobre galpão" loading="lazy"><figcaption>Sistema comercial em galpão</figcaption></figure>
+      <figure class="g-tall"><img src="assets/obras/equipe-modulo.jpg" alt="Equipe transportando módulo fotovoltaico" loading="lazy"><figcaption>Equipe em campo</figcaption></figure>
+      <figure><img src="assets/obras/inversores-string-box.jpg" alt="Inversores e string boxes" loading="lazy"><figcaption>Inversores e proteção CC</figcaption></figure>
+      <figure><img src="assets/obras/residencial-ceramica.jpg" alt="Sistema residencial em telhado cerâmico" loading="lazy"><figcaption>Residencial, telha cerâmica</figcaption></figure>
+      <figure class="g-wide"><img src="assets/obras/galpao-entardecer.jpg" alt="Usina sobre telhado comercial ao entardecer" loading="lazy"><figcaption>Comercial, entrega ao entardecer</figcaption></figure>
+      <figure class="g-wide"><img src="assets/obras/hero-telhado-residencial.jpg" alt="Sistema residencial visto de cima" loading="lazy" style="object-position:50% 60%"><figcaption>Residencial</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- QUEM ASSINA -->
+<section class="alt" id="sobre">
+  <div class="wrap about">
+    <div class="portrait"><img src="assets/obras/thiago-em-obra.jpg" alt="Thiago Santos, responsável técnico da TechPro Solar, em obra" loading="lazy" width="900" height="1000"></div>
+    <div>
+      <div class="head" style="margin-bottom:18px">
+        <span class="num">Quem assina</span>
+        <h2>Thiago Santos</h2>
+        <p>Técnico em Eletrotécnica · Registro no Conselho Federal dos Técnicos Industriais (CFT)</p>
+      </div>
+      <p>A TechPro Solar nasceu de mais de 3.000 projetos técnicos em instalações elétricas, energia solar e bombeamento. Quem analisa a sua conta é quem faz o projeto, acompanha a obra e assina a responsabilidade técnica.</p>
+      <p>Atendemos a partir de Campinas/SP, com projetos em outros estados quando o trabalho permite acompanhamento remoto e equipe local.</p>
+      <div class="creds">
+        <div><b>TRT</b><span>em cada projeto</span></div>
+        <div><b>NBR 5410 · 16690</b><span>e NR-10</span></div>
+        <div><b>CNPJ</b><span>44.150.790/0001-67</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="head">
+      <span class="num">Dúvidas frequentes</span>
+      <h2>Perguntas comuns</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Com energia solar a conta de luz zera?</summary><p>Não. Continua existindo o custo de disponibilidade da rede (a "taxa mínima") e, pelas regras da Lei 14.300, sistemas novos pagam uma parcela crescente do uso da rede sobre a energia compensada. A economia real depende do seu consumo e da tarifa — por isso mostramos a conta antes e depois na proposta.</p></details>
+      <details><summary>Quanto tempo leva para o sistema começar a gerar?</summary><p>A instalação costuma levar poucos dias. O prazo total depende principalmente da distribuidora, que tem prazos regulados para analisar o projeto e fazer a vistoria. Cuidamos de todo esse processo.</p></details>
+      <details><summary>Preciso de bateria?</summary><p>Na maioria das casas e comércios, não: o sistema on-grid usa a rede como "bateria" por meio dos créditos de energia. Bateria faz sentido quando há quedas de energia frequentes, cargas que não podem parar ou, no Grupo A, para reduzir a demanda no horário de ponta.</p></details>
+      <details><summary>Bombeamento solar funciona com tempo nublado?</summary><p>Funciona com vazão menor. Se a sua operação precisa de vazão constante, o sistema pode ser híbrido, com a rede complementando o sol automaticamente.</p></details>
+      <details><summary>Vocês atendem sistemas que outra empresa instalou?</summary><p>Sim. Fazemos manutenção, limpeza, diagnóstico de queda de geração e reconfiguração do monitoramento em sistemas de qualquer instalador.</p></details>
+      <details><summary>O que é TRT?</summary><p>É o Termo de Responsabilidade Técnica, emitido pelo técnico registrado no CFT. Ele identifica quem responde tecnicamente pelo projeto e é exigido pela distribuidora e por financiadores.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="alt" id="contato">
+  <div class="wrap">
+    <div class="head">
+      <span class="num">Fale com a TechPro</span>
+      <h2>Mande sua conta de luz</h2>
+      <p>Residência, fazenda, indústria ou integrador: conte o que precisa. Quem responde é técnico.</p>
+    </div>
+    <div class="contact">
+      <div class="cinfo">
+        <div class="ci"><svg class="ico"><use href="#i-phone"/></svg><div><small>WhatsApp / Telefone</small><a href="https://wa.me/5519992746549" target="_blank" rel="noopener">(19) 99274-6549</a></div></div>
+        <div class="ci"><svg class="ico"><use href="#i-mail"/></svg><div><small>E-mail</small><a href="mailto:contato@techprosolar.com.br">contato@techprosolar.com.br</a></div></div>
+        <div class="ci"><svg class="ico"><use href="#i-pin"/></svg><div><small>Base</small><span>Campinas/SP</span></div></div>
+        <div class="ci"><svg class="ico"><use href="#i-clock"/></svg><div><small>Atendimento</small><span>Seg a sex, 8h às 18h · Sáb, 8h às 12h</span></div></div>
+      </div>
+      <form id="form" novalidate>
+        <div><label for="f-nome">Nome</label><input id="f-nome" name="nome" required autocomplete="name"></div>
+        <div><label for="f-tel">Telefone / WhatsApp</label><input id="f-tel" name="tel" type="tel" required autocomplete="tel"></div>
+        <div><label for="f-cid">Cidade / Estado</label><input id="f-cid" name="cidade" autocomplete="address-level2"></div>
+        <div><label for="f-ass">O que você precisa?</label>
+          <select id="f-ass" name="assunto" required>
+            <option value="">Selecione</option>
+            <option>Energia solar residencial ou comercial</option>
+            <option>Bombeamento solar</option>
+            <option>Eficiência energética — Grupo A</option>
+            <option>Manutenção / limpeza / monitoramento</option>
+            <option>Sou integrador — engenharia terceirizada</option>
+            <option>Outro</option>
+          </select></div>
+        <div class="full"><label for="f-msg">Mensagem (opcional)</label><textarea id="f-msg" name="msg" placeholder="Valor médio da conta, potência da bomba, tipo de telhado…"></textarea></div>
+        <label class="consent full"><input type="checkbox" id="f-ok" required> Autorizo a TechPro Solar a usar estes dados apenas para responder ao meu contato, conforme a política de privacidade abaixo.</label>
+        <div class="full"><button class="btn btn-sun" type="submit"><svg class="ico"><use href="#i-chat"/></svg>Enviar pelo WhatsApp</button></div>
+        <p class="form-note full">Ao enviar, sua mensagem abre no WhatsApp já preenchida. Lá você pode anexar a foto da conta de luz.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a href="#home" class="brand"><img src="assets/techpro-logo-escuro.png" alt="TechPro Solar" width="200" height="54" style="height:54px"></a>
+        <p>Energia solar, bombeamento e eficiência energética com responsabilidade técnica.</p>
+      </div>
+      <div>
+        <h4>Serviços</h4>
+        <ul><li><a href="#solar">Energia solar</a></li><li><a href="#bombeamento">Bombeamento solar</a></li><li><a href="#grupo-a">Eficiência Grupo A</a></li><li><a href="#manutencao">Manutenção</a></li><li><a href="#integradores">Para integradores</a></li></ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul><li>(19) 99274-6549</li><li>contato@techprosolar.com.br</li><li>Campinas/SP</li><li>Maranata Serviços Ltda<br>CNPJ 44.150.790/0001-67</li></ul>
+      </div>
+    </div>
+    <details class="priv" id="privacidade">
+      <summary>Política de privacidade</summary>
+      <p>A TechPro Solar (Maranata Serviços Ltda, CNPJ 44.150.790/0001-67) coleta nome, telefone, cidade, a mensagem e os documentos enviados (como contas de energia) exclusivamente para responder ao seu contato e elaborar propostas. Esses dados não são vendidos nem compartilhados com terceiros, exceto com distribuidoras, fornecedores e parceiros quando necessário para executar o serviço contratado. Você pode solicitar a consulta, correção ou exclusão dos seus dados pelo e-mail contato@techprosolar.com.br, conforme a Lei Geral de Proteção de Dados (Lei nº 13.709/2018).</p>
+    </details>
+    <div class="legal">
+      <span>© 2026 TechPro Solar. Todos os direitos reservados.</span>
+      <span>techprosolar.com.br</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/5519992746549" target="_blank" rel="noopener" aria-label="Falar com a TechPro Solar no WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.7a10.7 10.7 0 0 1-5.4-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.7zm5.9-8c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8.9 3.8.8a3.3 3.3 0 0 0 2.2-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.2-.3-.3-.6-.4z"/></svg>
+</a>
+
+<script>
+function toggleNav(b){
+  var n=document.getElementById('nav'), open=n.classList.toggle('open');
+  b.setAttribute('aria-expanded',open);
+}
+document.querySelectorAll('#nav a').forEach(function(a){
+  a.addEventListener('click',function(){document.getElementById('nav').classList.remove('open')});
+});
+document.getElementById('form').addEventListener('submit',function(e){
+  e.preventDefault();
+  var f=this, nome=f.nome.value.trim(), tel=f.tel.value.trim(), ass=f.assunto.value;
+  if(!nome||!tel||!ass){alert('Preencha nome, telefone e o assunto.');return;}
+  if(!document.getElementById('f-ok').checked){alert('Marque a autorização de uso dos dados para continuar.');return;}
+  var txt='Olá! Vim pelo site da TechPro Solar.\n\n*Nome:* '+nome+'\n*Telefone:* '+tel+
+    (f.cidade.value.trim()?'\n*Cidade/UF:* '+f.cidade.value.trim():'')+
+    '\n*Assunto:* '+ass+
+    (f.msg.value.trim()?'\n\n'+f.msg.value.trim():'');
+  window.open('https://wa.me/5519992746549?text='+encodeURIComponent(txt),'_blank');
+});
+</script>
+</body>
+</html>
